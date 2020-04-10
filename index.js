@@ -1,21 +1,16 @@
 require('dotenv').config();
 
-const express = require('express');
-
-const apiRouter = require('./api/apiRouter')
-
-const server = express();
-
-server.get('/', (req,res) => {
-    res.send((`<h1>This be a webpage</h1>`));
-} );
-
-server.use(express.json());
-
-server.use('api', apiRouter);
+const server = require('./api/server');
 
 const PORT = process.env.PORT || 6000;
-server.listen(PORT, () => console.log(`\n*** Server running on port ${PORT}***\n`));
+
+server.get('/', (req, res, next) => {
+    res.send(`<h2>Welcome to your Homepage</h2>`);
+});
+
+server.listen(PORT, () => {
+    console.log(`\n*** server running on port ${PORT} ***\n`);
+});
 
 /*
 play this: https://www.youtube.com/watch?v=d-diB65scQU

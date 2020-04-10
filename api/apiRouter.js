@@ -1,7 +1,7 @@
 const express = require('express');
-const projectRouter = require('./projectRouter');
+const projectRouter = require('./Projects/projectRouter');
 
-const actionRouter = require('./actionRouter');
+const actionRouter = require('./Actions/actionRouter');
 
 const router = express.Router();
 

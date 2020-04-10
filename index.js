@@ -1,3 +1,20 @@
+const express = require('express');
+
+const apiRouter = require('./api/apiRouter')
+
+const server = express();
+
+server.get('/', (req,res) => {
+    res.send((`<h1>This be a webpage</h1>`));
+} );
+
+server.use(express.json());
+
+server.use('api', apiRouter);
+
+const port = 6000;
+server.listen(port, () => console.log(`\n*** Server running on port ${port}***\n`));
+
 /*
 play this: https://www.youtube.com/watch?v=d-diB65scQU
 
@@ -12,3 +29,4 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Go code!
 */
+

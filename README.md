@@ -40,13 +40,27 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Express  is javascript for the server, and it is Ansynchronous.
+
+
 - [ ] Describe Middleware?
+
+ Middleware can be used as a mid-layer function to assess the http request and provide a response. Middleware is a great choice for authentication functions.
+
 
 - [ ] Describe a Resource?
 
+A resource is an item on the DB (or a collection of items)
+
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+A 2xx code and a success message
+
 - [ ] How can we partition our application into sub-applications?
+
+ Routes, which are imported using require() in the appropriate sub-areas of the api.
+
 
 ## Minimum Viable Product
 

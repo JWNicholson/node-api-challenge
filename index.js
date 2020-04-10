@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 
 const apiRouter = require('./api/apiRouter')
@@ -12,8 +14,8 @@ server.use(express.json());
 
 server.use('api', apiRouter);
 
-const port = 6000;
-server.listen(port, () => console.log(`\n*** Server running on port ${port}***\n`));
+const PORT = process.env.PORT || 6000;
+server.listen(PORT, () => console.log(`\n*** Server running on port ${PORT}***\n`));
 
 /*
 play this: https://www.youtube.com/watch?v=d-diB65scQU
